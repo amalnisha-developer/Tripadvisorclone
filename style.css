@@ -1,0 +1,984 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Trip Sans VF";
+    src: url(path/to/trip-sans-vf.woff2) format("woff2"),
+         url(path/to/trip-sans-vf.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Trip Sans";
+    src: url(path/to/trip-sans.woff2) format("woff2"),
+         url(path/to/trip-sans.woff) format("woff");
+}
+
+
+body {
+    font-family: "Trip Sans VF", "Trip Sans", Arial, sans-serif;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0;
+    
+}
+
+
+
+
+/* Navbar section */
+.navbar__s1 img{
+  width: 200px;
+  
+}
+.navbar{
+  
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    position: static;
+    font-weight: bold;
+    opacity: 0.9 rgb(59, 57, 57);
+    font-size: 16px;
+    color: #000000;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    }
+
+.navbar__s2{
+    display: flex;
+    gap: 30px;
+    font-size: 15px;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+}
+/* Default styling for the buttons */
+
+
+    .discover-button,
+.review-button {
+    background-color: transparent; /* Set your desired background color */
+    color: black; /* Set your desired text color */
+    padding: 12px;
+    cursor: pointer; /* Add pointer cursor on hover */
+    font-weight: bold;
+    border: none; /* Remove border */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Add smooth transition for background color */
+    border-radius: 25px;
+    font-size: 15.5px;
+}
+.discover-container,.review_container{
+    position: relative;
+}
+.additional-content {
+    display: none;
+    position: absolute;
+    top: 120%; /* Adjust the distance from the Discover button */
+    left: 0;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 140%;
+    
+}
+.review-button:hover,
+.discover-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.discover-button:hover + .additional-content {
+    display: block;
+}
+.review-button:hover +.additional-content{
+    display: block;
+}
+
+
+
+/* Hover state for the buttons */
+.discover-button:hover,
+.review-button:hover {
+    
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.Trips, .Flights {
+    border: none;
+    text-decoration: none;
+    position: static;
+    color: #000000;
+}
+
+.Trips:hover, .Flights:hover {
+    text-decoration: underline;
+}
+.navbar__s3{
+    display: flex;
+}
+.navbar__s3__icon {
+    display: flex;
+    align-items: center; 
+}
+
+
+
+
+.navbar__s3 button {
+   margin-left: 20px;
+    color: white;
+    background-color: black;
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Adjust border radius for a smoother look */
+    padding: 12px 18px; /* Adjust padding for better proportions */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+    /* Optional: Add box shadow for a subtle lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight:bold;
+}
+/* Add hover effect to the button */
+.navbar__s3 button:hover {
+    background-color: #333; /* Darken the background color on hover */
+
+}
+
+/* Heading section */
+.heading{
+    text-align: center;
+    font-weight:bolder;
+    font-size: 2vmax;
+    width:max-content;
+    position: relative;
+    margin: 40px auto;
+    
+    
+}
+
+.heading__container{
+    display: flex;
+    margin-left: 350px;
+    gap: 30px;
+    color:#3b3b3b;
+    font-weight: bolder;
+}
+/* search restarent hotel ... */
+.heading__container{
+    cursor: pointer;
+}
+.heading__container p:hover{
+    text-underline-offset: 10px; 
+text-decoration:solid underline black 2px;
+opacity: 0.8;
+}
+/* Input search */
+.input-search{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+ 
+
+.input-search__section {
+    padding: 8px;
+    border: solid #E0E0E0 1px;
+    border-radius: 100px;
+    width: 60%; /* Adjust the width as needed */
+    font-weight: bolder;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adjust the values for a thicker shadow */
+    margin-top: 30px;
+    
+    
+    
+}
+.input-search__section input {
+    border: none;
+    color: #545454;
+    width: 80%; /* Adjust the width as needed */
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+.input-search__section button {
+    color: black;
+    background-color: #34E0A1;
+    border: none;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left:10px;
+    cursor: pointer;
+    width:100px;
+    font-weight: 600;
+}
+.input-search__section button:hover{
+    opacity:0.4 ;
+}
+.input-search__section input:focus{
+    outline: none;
+}
+/* trip */
+
+.trip-box__section{
+    display: flex;
+    justify-content: center;
+}
+.trip-box{
+    margin-top:70px;
+    background-color:#DACAFD;
+    width:1000px;
+    height:350px;
+    padding: 50px;
+    position: relative;
+    border-radius: 20px;
+    left:130px;
+}
+ .images-card img {
+    width: 100%;
+    height: 100%;
+  }
+  .images-card {
+    position: absolute;
+
+    top: 30px; /* Align image to the top */
+  }
+  
+  .trip-box__s1 {
+    font-size: bolder;
+    font-style: bold;
+    color: #301D49;
+    font-weight: 900;
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    right: 700px;
+
+  }
+  
+  .image__button {
+    color: white;
+    background-color: #301D49;
+    border: none;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 180px;
+    position: absolute;
+    top: 300px;
+    right: 740px;
+    
+
+  }
+  
+  .image__button:hover {
+    opacity: 0.6;
+  }
+ 
+
+
+/* art culture  */
+ .mini-box-section{
+   display: flex;
+    justify-content: center;
+}
+
+.mini-box {
+    margin-top:60px;
+    background-color:#F2ECF9;
+    width:1000px;
+    height:100px;
+    padding: 50px;
+    position: relative;
+    border-radius: 20px;
+
+  }
+  
+  .images-card2 {
+    position: absolute;
+    left: 0; /* Align image to the left */
+    top: 0; /* Align image to the top */
+  }
+  
+  .mini-box img {
+    width: 130px; /* Adjust width as needed */
+    height: 150px; /* Maintain aspect ratio */
+    margin: 18px; /* Add some space around the image */
+    transform: rotatez(-10deg);
+    border-radius: 10px;
+}
+  
+  .mini-box__s1 {
+    
+    margin-left: 120px; /* Adjust margin to create space between image and content */
+
+  }
+  
+  .mini-box__button {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right side */
+  }
+  
+  .mini-box__button button {
+    background-color:white;
+    color:black;
+    padding:  15px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    border: solid black 1px;
+    width: 130px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left:10px;
+    
+    font-weight: 600;
+  }
+  .mini-box__button button:hover{
+    background-color: black;
+    color:white;
+    
+    
+  }
+  .mini-box p{
+    color: #333333;
+  }
+  
+  .advertisement{
+    margin-left: 250px;
+    margin-top: 60px;
+    position: relative;
+
+  }
+.ads1{
+    position: absolute;
+}
+  
+  
+/* Beaches */
+.beach {
+    padding: 10px;
+    margin: 6%;
+    position: relative;
+    cursor: pointer;
+
+
+
+
+
+}
+
+.beach__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5px;
+    position: relative;
+}
+
+.beach-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+
+
+}
+
+.beach-card img {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+.beach p{
+    color:#333333;
+    margin-top: 8px;
+}
+.beach h3 {
+    position: absolute;
+    top: 200px;
+    color: whitesmoke;
+    margin: 10px;
+    font-size: 2vmax;
+    position: absolute;
+    top: 180px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    filter: brightness(120%); /* Increase brightness by 20% */
+}
+.asia{
+    display:flex;
+    border: solid #E0E0E0 2px;
+    width: 60px;
+    padding:  24px;
+    border-radius: 8px;
+    gap: 5px;
+    margin-top: 30px;
+
+    
+}
+.beach img:hover{
+    opacity: 0.6;
+}
+.recent-searches{
+margin-left: 100px;
+
+
+}
+
+
+.asia:hover{
+    color: white;
+    background-color: #000000;
+
+}
+/* like */
+.circle-icon {
+    
+    width: 13px; /* adjust size as needed */
+    height: 13px; /* adjust size as needed */
+    border-radius: 50%; /* to make it a circle */
+    margin: 2px;
+    
+}
+.icon {
+    display: flex;
+    margin-top: 5px;
+}
+
+.like {
+    padding: 10px;
+margin-right: 10px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.like__card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+}
+
+.like__card img {
+    width: 90%;
+    height: 70%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.like__content {
+    color: #333333;
+    margin-top: 8px;
+}
+
+.like__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+    position: relative;
+}
+.like h4{
+    margin-top: 5px;
+    width:150px;
+}
+.like img:hover{
+    opacity: 0.6;
+}
+
+/* Vibrant Asian cities */
+/* Vibrant Asian cities */
+.cities {
+    padding: 10px;
+    position: relative;
+}
+
+.cities__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5px;
+    position: relative;
+}
+
+.cities-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+    position: relative; /* Added relative positioning */
+}
+
+.cities-card img {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cities-card h3 {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    color: whitesmoke;
+    margin: 10px;
+    font-size: 2vmax;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    filter: brightness(120%); /* Increase brightness by 20% */
+}
+
+.cities p {
+    color: #333333;
+    margin-top: 8px;
+}
+
+.cities {
+    padding: 10px;
+    margin: 5% 0;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.cities__container {
+    display: flex;
+
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-right: 20px;
+    
+}
+
+.cities-card {
+    flex-grow: 1;
+    flex-basis:20%;
+    margin: 5px;
+    flex-wrap:nowrap;
+    /* Added relative positioning */
+}
+
+.cities-card img {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cities-card h3 {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    color: whitesmoke;
+    margin: 10px;
+    font-size: 2vmax;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    filter: brightness(120%); /* Increase brightness by 20% */
+}
+
+.cities p {
+    color: #333333;
+    margin: 10px;
+}
+.cities img:hover{
+opacity:0.6;
+}
+/* explore */
+.explore{
+    background-color: #FAF1ED;
+    width: 88%;
+    padding: 80px;
+    
+    
+}
+.explore__title{
+    font-size: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    
+
+}
+.explore__section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.explore__section img{
+    width:90%;
+    height: 90%;
+    border-radius: 5px;
+}
+.explore__card{
+    flex-grow: 1;
+    flex-basis: 15%;
+    
+}
+.explore__content{
+    font-size:larger;
+    margin-top: 20px;
+    
+
+}
+.explore img:hover{
+    opacity:0.6 ;
+}
+/* rental */
+.rental {
+    display: flex;
+    margin: 80px;
+  }
+  
+  .rental_section {
+    margin-bottom: 40px;
+  }
+  
+  .rental_section h2 {
+    margin-bottom: 30px;
+    margin-left: 3px;
+    margin: 2px;
+  }
+  
+  .rental_section p {
+    font-weight:400;
+font-style:normal;
+font-variant:normal;
+width: 300px;
+margin-top: 10px;
+padding: 0px 24px;
+font-size: larger;
+width: 200px;
+
+    
+  }
+  
+  .image_1,
+  .image_2,
+  .image_3 {
+    display: inline-block;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 15%;
+  }
+  
+  .image_1 img,
+  .image_2 img,
+  .image_3 img {
+    width: 250px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  .rental img:hover{
+    opacity: 0.6;
+
+  }
+
+
+.travel{
+    background-color: #FFF9E1;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.travel__image img{
+    width: 90%;
+    
+    
+}
+.travel__container{
+    margin:100px ;
+    
+    left:0;
+
+    
+    
+}
+.travel__title{
+    font-size: 30px;
+    font-weight: bolder;
+    width: 350px;
+    padding:0px 24px ;
+}
+.travel__content{
+   
+font-weight:400;
+font-style:normal;
+font-variant:normal;
+width: 300px;
+margin-top: 10px;
+padding: 0px 24px;
+font-size: larger;
+
+}
+.travel img{
+    padding: 0px 24px;
+}
+.travel__button{
+    margin-top: 7px;
+    margin-left: 20px;
+    color: white;
+    background-color: black;
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Adjust border radius for a smoother look */
+    padding: 12px 18px; /* Adjust padding for better proportions */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+    /* Optional: Add box shadow for a subtle lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight:bold;
+}
+/* Add hover effect to the button */
+
+.travel__button:hover{
+    background-color: #333; /* Darken the background color on hover */
+
+}
+.footer {
+    
+    justify-content: space-between;
+    background-color: #FAF1ED;
+    padding: 30px;
+    font-size: 12px;
+  }
+
+  .footer__one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    
+  }
+
+  .footer__one__section {
+    
+    
+    color:#4d4a4a;
+  }
+  .footer {
+    margin-top: 40px;
+    justify-content: space-around;
+    background-color: #FAF1ED;
+    padding: 20px;
+    font-size: 12px;
+    position: relative;
+}
+
+
+
+  
+  
+  .footer__one {
+    display: flex;
+    padding: 40px;
+    cursor: pointer;
+  }
+  
+  .footer__one__section,
+  .footer__two__section {
+    margin-right: 20px;
+
+  }
+  .footer__two {
+    color:#4d4a4a;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .footer__two__section {
+    margin-right: 20px;
+  }
+  
+  .footer__two__section p {
+    margin: 5px 0;
+  }
+  
+  .footer__two__section label {
+    display: block;
+  }
+  .footer__one__section p:hover{
+    text-decoration: underline;
+  }
+  @media screen and (max-width:800px) {
+    body{
+        font-size: 12px;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+ 
+    .navbar__s2 {
+        display: none;
+    }
+    .navbar__s3 {
+        display: none;
+    }
+    .heading {
+        display: none;
+    }
+
+    .heading__container {
+        margin: 10px;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%; /* Adjust width as needed */
+        overflow-x:auto;
+        white-space: nowrap;
+        position: absolute;
+        right:0px ;/* Move the container to the left side */
+        top: 50; /* Optionally adjust top position if needed */
+    }
+    .heading__container p:hover{
+        text-decoration: underline;
+        opacity: 0.4;
+    }
+  .input-search{
+    margin-top: 50px;
+  }
+  .input-search__section{
+    width: 90%;
+    
+    border-radius:20px;
+    height: 100px;
+    align-items: center;
+    
+    
+}
+.input-search__section input{
+    margin-top: 10px;
+   
+   
+    
+  
+}
+
+.input-search__section button {
+    margin-top: 50px;
+    align-items: center;
+    position: absolute;
+    right: 200px; /* Adjust as needed */
+}
+
+    
+.mini-box {
+   display: none;}
+   
+  /* trip */
+
+    .trip-box-section {
+      margin-top: 40px; /* Adjust margin-top as needed */
+      
+    }
+  
+    .trip-box {
+      width: 90%; /* Adjust width as needed */
+      padding: 30px; /* Adjust padding as needed */
+      left: 0; /* Align box to the left */
+    }
+  
+    .images-card {
+      position: absolute;
+      width: 100%; /* Make image take full width */
+      margin-bottom: 20px; /* Add space below image */
+      top:163px;
+      align-items: center;
+      right: 70px;
+      height: 60%;
+    }
+  
+    .trip-box__s1 {
+        margin-top: 30px;
+      position: absolute;
+      top: 0; /* Reset top position */
+      right: 0; /* Align text to the left */
+      width: 80%; /* Make text take full width */
+      text-align: center; /* Center text */
+      left:90px;
+    }
+  
+    .image__button {
+      position: absolute;
+      top: 130px; /* Reset top position */
+      right:0 ; 
+      left: 160px;/* Align button to the left */
+      text-align: center;
+      margin-top:30px ; /* Center button */
+    }
+  
+  .advertisement{
+    display: none;
+  }
+   .beach-card {
+    flex-basis: 40%;
+    position: relative;
+   }
+   .beach h3{
+    position: absolute;
+    top: 150px;
+   }
+.like__card {
+    flex-basis: 40%;
+    margin-top: 15px;
+    height: 200px;
+
+}
+.icon{
+    display: none;
+}
+.like p{
+    display: none;
+}
+.cities img{
+    flex-basis: 40%;
+    width: 120px;
+
+}
+.travel__card{
+    flex-basis: 20%;
+}
+.rental image_2,image_3{
+
+    display: none;
+
+}
+.rental {
+  display: none;
+}
+.explore{
+    width: 67%;
+}
+.explore__content{
+    font-size: 11px;
+}
+.travel img{
+    display: none;
+}
+.footer__two{
+
+gap: 10px;
+}
+.footer__two__section1{
+display: none;
+}
+
+}
